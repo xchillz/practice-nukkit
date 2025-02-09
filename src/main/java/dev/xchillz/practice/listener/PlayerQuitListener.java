@@ -9,8 +9,8 @@ import lombok.NonNull;
 
 public final class PlayerQuitListener implements Listener {
 
-  @EventHandler(priority = EventPriority.MONITOR)
-  public void onPlayerQuit(@NonNull PlayerQuitEvent event) {
-    ProfileRegistry.clearProfile(event.getPlayer());
-  }
+    @EventHandler(priority = EventPriority.MONITOR)
+    public void onPlayerQuit(@NonNull PlayerQuitEvent event) {
+        ProfileRegistry.clearProfile(event.getPlayer());
+    }
 }

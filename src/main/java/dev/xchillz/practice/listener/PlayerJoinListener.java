@@ -9,8 +9,8 @@ import lombok.NonNull;
 
 public final class PlayerJoinListener implements Listener {
 
-  @EventHandler(priority = EventPriority.LOWEST)
-  public void onPlayerJoin(@NonNull PlayerJoinEvent event) {
-    ProfileRegistry.registerProfile(event.getPlayer());
-  }
+    @EventHandler(priority = EventPriority.LOWEST)
+    public void onPlayerJoin(@NonNull PlayerJoinEvent event) {
+        ProfileRegistry.registerProfile(event.getPlayer());
+    }
 }
