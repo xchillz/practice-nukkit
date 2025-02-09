@@ -6,11 +6,15 @@ import cn.nukkit.event.Listener;
 import cn.nukkit.event.player.PlayerJoinEvent;
 import dev.xchillz.practice.profile.ProfileRegistry;
 import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
+@RequiredArgsConstructor
 public final class PlayerJoinListener implements Listener {
+
+    private final ProfileRegistry profileRegistry;
 
     @EventHandler(priority = EventPriority.LOWEST)
     public void onPlayerJoin(@NonNull PlayerJoinEvent event) {
-        ProfileRegistry.registerProfile(event.getPlayer());
+        this.profileRegistry.registerProfile(event.getPlayer());
     }
 }
