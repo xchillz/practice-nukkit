@@ -2,7 +2,6 @@ package dev.xchillz.practice.profile;
 
 import cn.nukkit.Player;
 import cn.nukkit.Server;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
 
@@ -10,7 +9,6 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Data
-@Builder
 public final class Profile {
 
     private final UUID uuid;

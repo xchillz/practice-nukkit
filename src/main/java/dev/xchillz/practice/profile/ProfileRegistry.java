@@ -14,10 +14,7 @@ public final class ProfileRegistry {
     public void registerProfile(@NonNull Player player) {
         UUID uuid = this.getPlayerUUID(player);
 
-        this.profiles.put(uuid, Profile
-                .builder()
-                .uuid(uuid)
-                .name(player.getName()).build());
+        this.profiles.put(uuid, new Profile(uuid, player.getName()));
     }
 
     public Profile fetchProfile(@NonNull Player player) {
