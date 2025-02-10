@@ -1,7 +1,7 @@
 package dev.xchillz.practice.item;
 
 
-import cn.nukkit.event.entity.EntityDamageEvent;
+import cn.nukkit.event.entity.EntityDamageByEntityEvent;
 import cn.nukkit.event.player.PlayerInteractEvent;
 import cn.nukkit.item.Item;
 import lombok.Getter;
@@ -30,7 +30,7 @@ public abstract class CustomItem {
         return item;
     }
 
-    public abstract void onDamage(EntityDamageEvent event);
+    public abstract void onAttack(EntityDamageByEntityEvent event);
 
     public abstract void onInteract(PlayerInteractEvent event);
 

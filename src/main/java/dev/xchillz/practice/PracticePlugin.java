@@ -2,6 +2,8 @@ package dev.xchillz.practice;
 
 import cn.nukkit.plugin.PluginBase;
 import dev.xchillz.practice.item.ItemRegistry;
+import dev.xchillz.practice.listener.EntityDamageByEntityListener;
+import dev.xchillz.practice.listener.PlayerInteractListener;
 import dev.xchillz.practice.listener.PlayerJoinListener;
 import dev.xchillz.practice.listener.PlayerQuitListener;
 import dev.xchillz.practice.profile.ProfileRegistry;
@@ -17,5 +19,7 @@ public final class PracticePlugin extends PluginBase {
 
         this.getServer().getPluginManager().registerEvents(new PlayerJoinListener(profileRegistry), this);
         this.getServer().getPluginManager().registerEvents(new PlayerQuitListener(profileRegistry), this);
+        this.getServer().getPluginManager().registerEvents(new PlayerInteractListener(itemRegistry), this);
+        this.getServer().getPluginManager().registerEvents(new EntityDamageByEntityListener(itemRegistry), this);
     }
 }

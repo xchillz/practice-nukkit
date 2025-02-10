@@ -1,6 +1,5 @@
 package dev.xchillz.practice.item;
 
-import cn.nukkit.item.Item;
 import lombok.NonNull;
 
 import java.util.HashMap;
@@ -14,12 +13,12 @@ public final class ItemRegistry {
         this.customItems.put(customItem.getId(), customItem);
     }
 
-    public @NonNull Item getItem(String id) {
+    public @NonNull CustomItem getItem(String id) {
         if (!this.customItems.containsKey(id)) {
             throw new RuntimeException(String.format("No item with id '%s'", id));
         }
 
-        return this.customItems.get(id).toItem();
+        return this.customItems.get(id);
     }
 
 }
